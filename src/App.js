@@ -1,24 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import Heros from './Component/Heros';
+import Amplify from './Component/Amplify';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Core from './Component/Core';
+import Tokenomics from './Component/Tokenomics';
+import Supply from './Component/Supply';
+import Cases from './Component/Cases';
+import Team from './Component/Team';
+import Partners from './Component/Partners';
+import Rodmp from './Component/Rodmp';
+import Contact from './Component/Contact';
+import Footer from './Component/Footer';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Aos from 'aos';
+import "aos/dist/aos.css"
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    Aos.init({ duration: 1500, });
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <Heros />
+      <Amplify />
+      <Core />
+      <Tokenomics />
+      <Supply />
+      <Cases />
+      <Team />
+      <Partners />
+      <Rodmp />
+      <Contact />
+      <Footer/>
+    </>
   );
 }
 
